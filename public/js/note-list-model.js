@@ -10,6 +10,6 @@
   List.prototype.newNote = function(text) {
     this._notes.push(new Note(text));
   };
-  
+
   exports.List = List;
 })(this);

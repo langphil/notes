@@ -7,11 +7,11 @@ Completed
 -------
 - [x] Model for an individual note
 - [x] Model for a list of notes
+- [x] A view for the list of notes
+- [x] Create and serve as html
 
 Incomplete
 -------
-- [ ] A view for the list of notes
-- [ ] Create and serve an index.hmtl
 
 Installation
 -------
