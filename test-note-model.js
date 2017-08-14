@@ -1,9 +1,9 @@
 (function(exports) {
-  function string() {
-    var text = new Note("");
-    if(text.text !== "") {
+  function stringChecker() {
+    var text = new Note(text);
+    if(text.text_return !== "" && typeof text.text_return !== 'string') {
       throw new Error("This is not a note");
     }
   }
-  string();
+  stringChecker();
 })(this);
