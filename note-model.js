@@ -1,10 +1,11 @@
-(function Note() {
+(function(exports) {
+  function Note(text) {
+    this.text = text;
+  }
 
-  var Note = function(text) {
-    this.note_text = text;
+  Note.prototype.text_return = function() {
+    return this.text;
   };
 
-  Note.prototype.return = function() {
-    return this.note_text;
-  };
-})();
+  exports.Note = Note;
+})(this);
