@@ -1,10 +1,11 @@
 (function(exports) {
   function htmlPrint() {
 
-    var view = new View();
-    var note = new Note("Foo");
+    var list = new List();
+    list.newNote('Foo');
+    var view = new View(list);
     
-    if(view.print !== "<ul><li><div>Foo</div></li></ul>") {
+    if(view.print() !== "<li>Foo</li>") {
       throw new Error("No HTML is present");
     }
   }
