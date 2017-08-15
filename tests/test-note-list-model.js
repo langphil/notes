@@ -4,9 +4,9 @@
     var list = new List();
     list.newNote('Foo');
 
-    assert.isTrue(typeof list._notes === 'object');
-    assert.isTrue(list._notes[0]._text === 'Foo');
-    assert.isTrue(list._notes[0]._text !== '');
+    assert.isEqual(typeof list._notes, 'object');
+    assert.isEqual(list._notes[0]._text, 'Foo');
+    assert.isNotEmpty(list._notes[0]._text);
   }
   singleNote();
 })(this);

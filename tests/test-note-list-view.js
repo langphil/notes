@@ -5,8 +5,8 @@
     list.newNote('Foo');
     var view = new View(list);
 
-    assert.isTrue(view.printHtml() === "<ul><li>Foo</li></ul>");
-    assert.isTrue(typeof view.printHtml() === 'string');
+    assert.isEqual(view.printHtml(), "<ul><li>Foo</li></ul>");
+    assert.isString(view.printHtml());
 
   }
   singleNoteHtml();
@@ -20,8 +20,8 @@
     list.newNote('Bar');
     var view = new View(list);
 
-    assert.isTrue(view.printHtml() === "<ul><li>Foo</li><li>Bar</li></ul>");
-    assert.isTrue(view.printHtml() !== "");
+    assert.isEqual(view.printHtml(), "<ul><li>Foo</li><li>Bar</li></ul>");
+    assert.isNotEmpty(view.printHtml());
 
   }
   multipleNoteHtml();
@@ -32,8 +32,8 @@
 
     var list = new List();
     var view = new View(list);
-    
-    assert.isTrue(view.printHtml() === "<ul></ul>");
+
+    assert.isEqual(view.printHtml(), "<ul></ul>");
 
   }
   noNoteHtml();

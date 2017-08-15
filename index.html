@@ -4,20 +4,23 @@
     <meta charset="utf-8">
     <title>Notes</title>
     <link href="./stylesheets/style.css" rel="stylesheet" type="text/css" />
-    <!-- Unit testing scripts -->
+  </head>
+  <body>
+    <div class="container">
+      <h1>Notes</h1>
+      <div id="notes"></div>
+    </div>
+    <!-- Test scripts -->
     <script type="text/javascript" src="./src/note-model.js"></script>
     <script type="text/javascript" src="./src/note-list-model.js"></script>
     <script type="text/javascript" src="./src/note-list-view.js"></script>
+    <script type="text/javascript" src="./src/note-controller.js"></script>
+
     <!-- Javascript scripts -->
     <script type="text/javascript" src="./tests/assert.js"></script>
     <script type="text/javascript" src="./tests/test-note-model.js"></script>
     <script type="text/javascript" src="./tests/test-note-list-model.js"></script>
     <script type="text/javascript" src="./tests/test-note-list-view.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <h1 id="title">Notes</h1>
-    </div>
-    <script type="text/javascript" src="./src/note-controller.js"></script>
+    <script type="text/javascript" src="./tests/test-note-list-controller.js"></script>
   </body>
 </html>
