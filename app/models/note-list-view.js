@@ -4,7 +4,7 @@
   }
 
   View.prototype.printHtml = function() {
-    html = "<ul>";
+    let html = "<ul>";
     this._list._notes.forEach( function(note) {
       html += "<li>" + note._text + "</li>";
     });

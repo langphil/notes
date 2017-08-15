@@ -7,20 +7,24 @@
   </head>
   <body>
     <div class="container">
-      <h1>Notes</h1>
+      <h1 id="title">Notes</h1>
       <div id="notes"></div>
     </div>
-    <!-- Test scripts -->
-    <script type="text/javascript" src="./src/note-model.js"></script>
-    <script type="text/javascript" src="./src/note-list-model.js"></script>
-    <script type="text/javascript" src="./src/note-list-view.js"></script>
-    <script type="text/javascript" src="./src/note-controller.js"></script>
+    <!-- Controllers -->
+    <script type="text/javascript" src="./app/controllers/note-controller.js"></script>
 
-    <!-- Javascript scripts -->
-    <script type="text/javascript" src="./tests/assert.js"></script>
-    <script type="text/javascript" src="./tests/test-note-model.js"></script>
-    <script type="text/javascript" src="./tests/test-note-list-model.js"></script>
-    <script type="text/javascript" src="./tests/test-note-list-view.js"></script>
-    <script type="text/javascript" src="./tests/test-note-list-controller.js"></script>
+    <!-- Models -->
+    <script type="text/javascript" src="./app/models/note-model.js"></script>
+    <script type="text/javascript" src="./app/models/note-list-model.js"></script>
+    <script type="text/javascript" src="./app/models/note-list-view.js"></script>
+    <script type="text/javascript" src="./app/models/note-html.js"></script>
+    <script type="text/javascript" src="./app/models/note-single-view.js"></script>
+
+    <!-- Spec -->
+    <script type="text/javascript" src="./spec/assert.js"></script>
+    <script type="text/javascript" src="./spec/test-note-model.js"></script>
+    <script type="text/javascript" src="./spec/test-note-list-model.js"></script>
+    <script type="text/javascript" src="./spec/test-note-list-view.js"></script>
+    <script type="text/javascript" src="./spec/test-note-list-controller.js"></script>
   </body>
 </html>

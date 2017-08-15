@@ -1,7 +1,7 @@
 (function(exports) {
   function singleNote() {
 
-    var list = new List();
+    let list = new List();
     list.newNote('Foo');
 
     assert.isEqual(typeof list._notes, 'object');

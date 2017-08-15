@@ -1,7 +1,7 @@
 (function(exports) {
   function stringChecker() {
 
-    var note = new Note("Foo");
+    let note = new Note("Foo");
 
     assert.isEqual(note.textReturn(), "Foo");
     assert.isString(note.textReturn());
