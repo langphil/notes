@@ -1,16 +1,12 @@
 (function(exports) {
-  function listChecker() {
-    
+  function singleNote() {
+
     var list = new List();
+    list.newNote('Foo');
 
-    if(typeof list._notes !== 'object') {
-      throw new Error("Array storage not working");
-    }
-
-    list.newNote("foo");
-    if(list._notes[0]._text !== 'foo') {
-      throw new Error("Array storage not working");
-    }
+    assert.isTrue(typeof list._notes === 'object');
+    assert.isTrue(list._notes[0]._text === 'Foo');
+    assert.isTrue(list._notes[0]._text !== '');
   }
-  listChecker();
+  singleNote();
 })(this);
