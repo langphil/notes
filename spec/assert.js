@@ -1,22 +1,30 @@
 var assert = {
-  isTrue: function(assertionToCheck) {
+  isTrue: function(assertionToCheck, message) {
     if (!assertionToCheck) {
-      throw new Error("Assertion failed: assertion is " + assertionToCheck);
+      console.log("%c Failed: " + message, 'color: red;');
+    } else {
+      console.log("%c Passed: " + message, 'color: green;');
     }
   },
-  isString: function(assertionToCheck) {
+  isString: function(assertionToCheck, message) {
     if (typeof assertionToCheck !== 'string') {
-      throw new Error("Assertion failed: assertion is " + assertionToCheck);
+      console.log("%c Failed: " + message, 'color: red;');
+    } else {
+      console.log("%c Passed: " + message, 'color: green;');
     }
   },
-  isNotEmpty: function(assertionToCheck) {
+  isNotEmpty: function(assertionToCheck, message) {
     if (assertionToCheck === '') {
-      throw new Error("Assertion failed: assertion is " + assertionToCheck);
+      console.log("%c Failed: " + message, 'color: red;');
+    } else {
+      console.log("%c Passed: " + message, 'color: green;');
     }
   },
-  isEqual: function(arg1, arg2) {
+  isEqual: function(arg1, arg2, message) {
     if (arg1 != arg2) {
-      throw new Error("Assertion failed: assertion is " + assertionToCheck);
+      console.log("%c Failed: " + message, 'color: red;');
+    } else {
+      console.log("%c Passed: " + message, 'color: green;');
     }
   }
 };
