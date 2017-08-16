@@ -13,6 +13,13 @@ var assert = {
       console.log("%c Passed: " + message, 'color: green;');
     }
   },
+  isObject: function(assertionToCheck, message) {
+    if(typeof assertionToCheck !== 'object') {
+      console.log("%c Failed: " + message, 'color: red');
+    } else {
+      console.log("%c Passed: " + message, 'color: green;');
+    }
+  },
   isNotEmpty: function(assertionToCheck, message) {
     if (assertionToCheck === '') {
       console.log("%c Failed: " + message, 'color: red;');
@@ -21,7 +28,7 @@ var assert = {
     }
   },
   isEqual: function(arg1, arg2, message) {
-    if (arg1 != arg2) {
+    if (arg1 !== arg2) {
       console.log("%c Failed: " + message, 'color: red;');
     } else {
       console.log("%c Passed: " + message, 'color: green;');

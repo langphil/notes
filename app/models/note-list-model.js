@@ -1,3 +1,5 @@
+"use strict";
+
 (function(exports) {
   function List() {
     this._notes = [];

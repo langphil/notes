@@ -1,6 +1,8 @@
+"use strict";
+
 (function(exports) {
   function Controller(list) {
-    list.newNote('Remember to eat plastic things')
+    list.newNote('Remember to eat plastic things');
     this._view = new View(list);
   }
 

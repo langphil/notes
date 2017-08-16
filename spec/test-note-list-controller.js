@@ -1,10 +1,13 @@
 (function(exports) {
   function noteController() {
-    var feedback = "has a list item"
-    var list = { newNote: function() {}, _notes: [] }
+
+    var feedback = "Is an object";
+    var list = { newNote: function() {}, _notes: [] };
     var controller = new Controller(list);
-    assert.isTrue(controller, feedback)
+    console.log(controller);
+
+    assert.isObject(controller, feedback);
   }
 
-  exports.noteController = noteController();
+  noteController();
 })(this);

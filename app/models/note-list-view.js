@@ -1,3 +1,5 @@
+"use strict";
+
 (function(exports) {
   function View(list) {
     this._list = list;
