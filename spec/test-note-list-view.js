@@ -1,11 +1,13 @@
+/*jshint esversion: 6 */
+
 (function(exports) {
   function singleNoteHtml() {
-    console.log("A list view: ");
 
     let list = new List();
     let view = new View(list);
     list.newNote('Foo');
 
+    console.log("A list view: ");
     assert.isEqual(view.printHtml(), "<ul><li>Foo</li></ul>", 'Can output HTML');
     assert.isString(view.printHtml(), 'Is a string');
 

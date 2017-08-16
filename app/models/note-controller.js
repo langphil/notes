@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+/*jslint node: true */
 "use strict";
 
 (function(exports) {
@@ -7,7 +9,7 @@
   }
 
    Controller.prototype.outputHTML = function() {
-    document.getElementById("notes").innerHTML = view.printHtml();
+    document.getElementById("notes").innerHTML = this._view.printHtml();
   };
 
   exports.Controller = Controller;

@@ -5,4 +5,4 @@ controller = new Controller(list);   //Html {_view: View}
 list.newNote('Eat plastic');
 list.newNote('Annoy people');
 
-html.outputHTML();
+controller.outputHTML();
