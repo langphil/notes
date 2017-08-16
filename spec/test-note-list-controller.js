@@ -5,16 +5,17 @@ function noteController() {
   let list = { newNote: function() {}, _notes: [] };
   let controller = new Controller(list);
 
-  console.log("Note controller: ");
+  console.log("Html output - List of notes: ");
   assert.isObject(controller, "Is an object");
 }
 
-
 function htmlController() {
-  var list = {
+
+  let list = {
     newNote: function() { return 'foo' }
   };
-  var noteController = new Controller(list);
+
+  let noteController = new Controller(list);
   noteController.outputHTML = function() {
     return '<ul><li>foo</li></ul>';
   };

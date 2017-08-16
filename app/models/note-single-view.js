@@ -3,8 +3,16 @@
 "use strict";
 
 (function(exports) {
-  function NoteView() {
-
+  function SingleNote(note) {
+    this._note = note;
   }
-  exports.NoteView = NoteView;
+
+  SingleNote.prototype.returnSingle = function() {
+    return this._note._text;
+  };
+
+  SingleNote.prototype.outputSingle = function() {
+    return "<ul><li>" + this.returnSingle() + "</li></ul>";
+  };
+  exports.SingleNote = SingleNote;
 })(this);

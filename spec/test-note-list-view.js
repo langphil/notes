@@ -1,43 +1,35 @@
 /*jshint esversion: 6 */
 
-(function(exports) {
-  function singleNoteHtml() {
+function singleNoteHtml() {
 
-    let list = new List();
-    let view = new View(list);
-    list.newNote('Foo');
+  let list = new List();
+  let view = new View(list);
+  list.newNote('Foo');
 
-    console.log("A list view: ");
-    assert.isEqual(view.printHtml(), "<ul><li>Foo</li></ul>", 'Can output HTML');
-    assert.isString(view.printHtml(), 'Is a string');
+  console.log("Initialise - View: ");
+  assert.isEqual(view.printHtml(), "<ul><li>Foo</li></ul>", 'Can output HTML');
+  assert.isString(view.printHtml(), 'Is a string');
+}
 
-  }
-  singleNoteHtml();
-})(this);
+function multipleNoteHtml() {
 
-(function(exports) {
-  function multipleNoteHtml() {
+  let list = new List();
+  let view = new View(list);
+  list.newNote('Foo');
+  list.newNote('Bar');
 
-    let list = new List();
-    let view = new View(list);
-    list.newNote('Foo');
-    list.newNote('Bar');
+  assert.isNotEmpty(view.printHtml(), 'Is not empty');
+  assert.isEqual(view.printHtml(), "<ul><li>Foo</li><li>Bar</li></ul>", 'Can output multiple lines of HTML');
+}
 
-    assert.isNotEmpty(view.printHtml(), 'Is not empty');
-    assert.isEqual(view.printHtml(), "<ul><li>Foo</li><li>Bar</li></ul>", 'Can output multiple lines of HTML');
+function noNoteHtml() {
 
-  }
-  multipleNoteHtml();
-})(this);
+  let list = new List();
+  let view = new View(list);
 
-(function(exports) {
-  function noNoteHtml() {
+  assert.isEqual(view.printHtml(), "<ul></ul>", 'Can output empty HTML');
+}
 
-    let list = new List();
-    let view = new View(list);
-
-    assert.isEqual(view.printHtml(), "<ul></ul>", 'Can output empty HTML');
-
-  }
-  noNoteHtml();
-})(this);
+singleNoteHtml();
+multipleNoteHtml();
+noNoteHtml();
