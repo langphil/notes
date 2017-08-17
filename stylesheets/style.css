@@ -1,12 +1,67 @@
 body {
-  background-color: white;
+  background-color: #00b7ff;
   color: black;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 
+/* TYPOGRAPHY */
+h1 {
+  color: white;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  -webkit-padding-start: 0px;
+}
+
+li {
+  color: grey;
+  font-size: 1.2em;
+  line-height: 1.6em;
+  list-style-type: none;
+}
+
+/* STRUCTURE */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+/* FORMS */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+textarea {
+  position: relative;
+  padding: 0.8em;
+  border: none;
+  font-size: 1.2em;
+  resize: none;
+  margin: 1em;
+}
+
+button {
+  background-color: grey;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  position: relative;
+  border: none;
+  border-radius: 100px;
+  box-shadow: none;
+  padding: 10px 26px;
+  margin-top: 2em;
 }

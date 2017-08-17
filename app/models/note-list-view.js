@@ -12,7 +12,7 @@
     const notes = this._list.returnNotes();
 
     for (var i = 0; i < notes.length; i++) {
-      let text = notes[i].textReturn().substr(0, 20);
+      let text = notes[i].textReturn().substr(0, 30);
       const id = notes[i].returnId();
       text = this._createURL(text, id);
       html += "<li>" + text + "</li>";
@@ -21,7 +21,7 @@
   };
 
   View.prototype._createURL = function(text, id) {
-    return "<a href=\"#notes/" + id + "\">" + text + "</a>";
+    return "<a href=\"#notes/" + id + "\">" + text + "....</a>";
   };
 
   exports.View = View;

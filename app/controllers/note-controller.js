@@ -10,5 +10,6 @@ window.onload = function() {
 
   controller = new Controller(list);
   controller.outputHTML();
-  // controller.makeUrlChangeNoteForCurrentPage();
+  controller.makeUrlChangeNoteForCurrentPage();
+  controller.postTextContent();
 };

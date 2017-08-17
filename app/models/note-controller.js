@@ -12,11 +12,11 @@
   };
 
   Controller.prototype.makeUrlChangeNoteForCurrentPage = function() {
-    window.addEventListener("hashchange", this.showNoteForCurrentPage());
+    window.addEventListener("hashchange", this.showNoteForCurrentPage);
   };
 
   Controller.prototype.showNoteForCurrentPage = function() {
-    this.showURL(this.getNoteFromURL(window.location));
+    controller.showURL(controller.getNoteFromURL(window.location));
   };
 
   Controller.prototype.getNoteFromURL = function(location) {
@@ -27,6 +27,21 @@
   Controller.prototype.showURL = function(note) {
     document
       .getElementById("notes").innerHTML = note;
+  };
+
+  Controller.prototype.postTextContent = function () {
+    document
+      .getElementById("submit")
+      .addEventListener("click", function(clickEvent) {
+        clickEvent.preventDefault();
+        controller.postText(clickEvent);
+    });
+  };
+
+  Controller.prototype.postText = function(clickEvent) {
+    console.log("Submit button was clicked")
+    console.log(clickEvent);
+    console.log(document.getElementById("textarea").value);
   };
 
   exports.Controller = Controller;
