@@ -10,7 +10,8 @@
   View.prototype.printHtml = function() {
     let html = "<ul>";
     this._list._notes.map( function(note) {
-      html += "<li>" + note._text + "</li>";
+      const text = note._text.substr(0, 20);
+      html += "<li>" + text + "</li>";
     });
     return html += "</ul>";
   };

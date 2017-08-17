@@ -2,8 +2,8 @@
 
 function singleNoteHtml() {
 
-  let list = new List();
-  let view = new View(list);
+  const list = new List();
+  const view = new View(list);
   list.newNote('Foo');
 
   console.log("Initialise - View: ");
@@ -13,8 +13,8 @@ function singleNoteHtml() {
 
 function multipleNoteHtml() {
 
-  let list = new List();
-  let view = new View(list);
+  const list = new List();
+  const view = new View(list);
   list.newNote('Foo');
   list.newNote('Bar');
 
@@ -24,12 +24,21 @@ function multipleNoteHtml() {
 
 function noNoteHtml() {
 
-  let list = new List();
-  let view = new View(list);
+  const list = new List();
+  const view = new View(list);
 
   assert.isEqual(view.printHtml(), "<ul></ul>", 'Can output empty HTML');
+}
+
+function noteLength() {
+
+  const list = new List();
+  const view = new View(list);
+  list.newNote('FooFooFooFooFooFooFooFoo');
+  assert.isEqual(view.printHtml(), '<ul><li>FooFooFooFooFooFooFo</li></ul>', 'Restricts note to 20 characters');
 }
 
 singleNoteHtml();
 multipleNoteHtml();
 noNoteHtml();
+noteLength()

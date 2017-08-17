@@ -2,7 +2,7 @@
 
 function singleNote() {
 
-  let single = new SingleNote(new Note('Foo'));
+  const single = new SingleNote(new Note('Foo'));
 
   console.log('HTML output - Single note: ');
   assert.isEqual(single.returnSingle(), 'Foo', 'Output matches input');

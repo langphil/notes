@@ -2,8 +2,8 @@
 
 function noteController() {
 
-  let list = { newNote: function() {}, _notes: [] };
-  let controller = new Controller(list);
+  const list = { newNote: function() {}, _notes: [] };
+  const controller = new Controller(list);
 
   console.log("Html output - List of notes: ");
   assert.isObject(controller, "Is an object");
@@ -11,11 +11,11 @@ function noteController() {
 
 function htmlController() {
 
-  let list = {
+  const list = {
     newNote: function() { return 'foo' }
   };
 
-  let noteController = new Controller(list);
+  const noteController = new Controller(list);
   noteController.outputHTML = function() {
     return '<ul><li>foo</li></ul>';
   };

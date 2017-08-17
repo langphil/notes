@@ -2,7 +2,7 @@
 
 function singleNote() {
 
-  let list = new List();
+  const list = new List();
   list.newNote('Foo');
 
   console.log('Initialise - List: ');

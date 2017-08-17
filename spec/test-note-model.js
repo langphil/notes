@@ -2,7 +2,7 @@
 
 function stringChecker() {
 
-  let note = new Note("Foo");
+  const note = new Note("Foo");
 
   console.log('Initialise - Note: ');
   assert.isEqual(note.textReturn(), "Foo", "Matches it's input");
