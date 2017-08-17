@@ -42,6 +42,8 @@
     console.log("Submit button was clicked")
     console.log(clickEvent);
     console.log(document.getElementById("textarea").value);
+    list.newNote(document.getElementById("textarea").value);
+    controller.outputHTML();
   };
 
   exports.Controller = Controller;
