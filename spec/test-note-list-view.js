@@ -1,8 +1,12 @@
 /*jshint esversion: 6 */
 
+function before() {
+  list = new List();
+  view = new View(list);
+}
+
 function singleNoteHtml() {
-  const list = new List();
-  const view = new View(list);
+  before();
   list.newNote('Foo');
 
   assert.isEqual(view.printHtml(), '<ul><li><a href="#notes/0">Foo</a></li></ul>', 'Can output HTML');
@@ -10,8 +14,7 @@ function singleNoteHtml() {
 }
 
 function multipleNoteHtml() {
-  const list = new List();
-  const view = new View(list);
+  before();
   list.newNote('Foo');
   list.newNote('Bar');
 
@@ -20,15 +23,12 @@ function multipleNoteHtml() {
 }
 
 function noNoteHtml() {
-  const list = new List();
-  const view = new View(list);
-
+  before();
   assert.isEqual(view.printHtml(), "<ul></ul>", 'Can output empty HTML');
 }
 
 function noteLength() {
-  const list = new List();
-  const view = new View(list);
+  before();
   list.newNote('FooFooFooFooFooFooFooFoo');
 
   assert.isEqual(view.printHtml(), '<ul><li><a href="#notes/0">FooFooFooFooFooFooFo</a></li></ul>', 'Restricts note to 20 characters');

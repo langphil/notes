@@ -17,7 +17,7 @@ function htmlController() {
   noteController.outputHTML = function() {
     return '<ul><li>foo</li></ul>';
   };
-  
+
   assert.isEqual(noteController.outputHTML(), '<ul><li>foo</li></ul>', "Can send HTML to the DOM");
 }
 
